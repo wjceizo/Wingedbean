@@ -48,10 +48,10 @@ The `Scripts` folder contains utility scripts for batch processing images, autom
 
 ## Download Links for Pre-trained Models
 
-Due to file size limitations, the pre-trained models have been uploaded to the following locations. Users can download them and place them in the appropriate folders:
+Due to file size limitations, the pre-trained models have been uploaded to the following locations. Users can download them and place them in the appropriate folders（Since GitHub cannot upload large files, please use OneDrive to download）:
 
 - GitHub: https://github.com/wjceizo/Wingedbean
-- OneDrive: [Link]
+- OneDrive: [winged_beans_application](https://uniofnottm-my.sharepoint.com/:f:/g/personal/psxjw18_nottingham_ac_uk/EncFRHmn13VKtC6Pl-l-TeYBqWXjpRfzZvmfxw1D9f3jlw?e=KQJE0q)
 
 ---
 
