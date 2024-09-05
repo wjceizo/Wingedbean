@@ -29,7 +29,7 @@ These models are used to segment annotated Winged Bean datasets. The folder also
 
 ## 3. Application Folder
 
-The `Application` folder contains a full-stack web application built using Vue.js and Flask, demonstrating image classification, segmentation, and seed counting for Winged Beans:
+This folder contains a full-stack web application built using Vue.js and Flask, demonstrating image classification, segmentation, and seed counting for Winged Beans:
 
 - The frontend is built with **Vue.js**, and users must run `npm install` and `npm run dev` in the `webview` folder to install dependencies and start the development server.
 - The backend is powered by **Flask**. After ensuring the Python environment is set up, users can run `application.py` to start the Flask server.
@@ -38,7 +38,7 @@ This application uses a decoupled frontend-backend architecture, allowing users 
 
 ## 4. Scripts Folder
 
-The `Scripts` folder contains utility scripts for batch processing images, automating classification, segmentation, and seed counting tasks:
+This folder contains utility scripts for batch processing images, automating classification, segmentation, and seed counting tasks:
 
 - **Classification script (`classification.py`)**: This script allows batch classification of a large number of images, automatically saving the results. Users can specify the input folder using the `-i` parameter and the output folder using the `-o` parameter.
 - **Segmentation script (`segmentation.py`)**: This script performs batch segmentation on input images, saving the results by category. Users can specify the input folder using the `-i` parameter and the output folder using the `-o` parameter.
@@ -46,7 +46,7 @@ The `Scripts` folder contains utility scripts for batch processing images, autom
 
 ---
 
-## Download Links for Pre-trained Models
+## Download Links
 
 Due to file size limitations, the pre-trained models have been uploaded to the following locations. Users can download them and place them in the appropriate folders（Since GitHub cannot upload large files, please use OneDrive to download）:
 
@@ -60,4 +60,4 @@ Due to file size limitations, the pre-trained models have been uploaded to the f
 To reproduce the training results, you can obtain the Winged Bean datasets via:
 
 - Contact **Ms. Chong Yuet Tian** for access to the Winged Bean dataset.
-- Alternatively, contact **Professor Tissa Chandesa** for access to the annotated dataset.
+- Contact **Professor Tissa Chandesa** for access to the annotated dataset.
