@@ -20,7 +20,7 @@ Each model's training script is written in Python, allowing users to select eith
 
 ## 2. Segmentation Folder
 
-This folder contains Python scripts for performing image segmentation using two prominent models:
+This folder contains Python scripts for performing image segmentation using two models:
 
 - **Mask R-CNN**
 - **YOLOv8**

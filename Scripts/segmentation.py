@@ -110,7 +110,7 @@ def process_image(image_name):
     print(f'Processed and saved {image_name} as {output_image_name}.')
 
 # Processing images using multithreading
-with ThreadPoolExecutor(max_workers=3) as executor:
+with ThreadPoolExecutor(max_workers=2) as executor:
     futures = [executor.submit(process_image, image_name) for image_name in os.listdir(args.input_dir)]
     for future in as_completed(futures):
         future.result()

@@ -1,34 +1,34 @@
 import axios from 'axios';
 
-// 创建一个 axios 实例
+// Create an axios instance
 const service = axios.create({
-  baseURL: 'http://localhost:5173', // 你的 API 基础路径
-  timeout: 5000, // 请求超时时间
+  baseURL: 'http://localhost:5173', // Your API base path
+  timeout: 5000, // Request timeout duration
 });
 
-// 请求拦截器
+// Request interceptor
 service.interceptors.request.use(
   config => {
-    // 在发送请求之前做些什么，例如添加 token
+    // Do something before sending the request, e.g., add a token
     // config.headers['Authorization'] = `Bearer ${store.state.token}`;
     return config;
   },
   error => {
-    // 处理请求错误
+    // Handle request error
     return Promise.reject(error);
   }
 );
 
-// 响应拦截器
+// Response interceptor
 service.interceptors.response.use(
   response => {
-    // 对响应数据做点什么
+    // Do something with the response data
     const res = response.data;
     // console.log(response)
     if (response.status !== 200) {
       console.log("response.status !== 200")
-      // 假设返回数据格式中有一个 code 字段表示错误或成功
-      // 你可以根据 res.code 做一些处理
+      // Assuming there's a code field in the response data indicating error or success
+      // You can handle it based on res.code
       return Promise.reject(new Error(res.message || 'Error'));
     } else {
       return res;
@@ -36,29 +36,27 @@ service.interceptors.response.use(
   },
   error => {
     console.log("error process")
-    // 处理响应错误
+    // Handle response error
     return Promise.reject(error);
   }
 );
 
-// 封装 GET 请求
+// Encapsulate GET request
 export const get = (url, params = {}) => {
   return service.get(url, { params });
 };
 
-// 封装 POST 请求
+// Encapsulate POST request
 export const post = (url, data = {}) => {
   return service.post(url, data);
 };
 
-// 封装 PUT 请求
+// Encapsulate PUT request
 export const put = (url, data = {}) => {
   return service.put(url, data);
 };
 
-// 封装 DELETE 请求
+// Encapsulate DELETE request
 export const del = (url, params = {}) => {
   return service.delete(url, { params });
 };
-
-// 你可以根据需要封装更多的方法，例如 PATCH
